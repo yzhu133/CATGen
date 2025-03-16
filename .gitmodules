@@ -1,3 +1,6 @@
 [submodule "third_party/numpy"]
 	path = third_party/numpy
 	url = https://github.com/numpy/numpy.git
+[submodule "numpy"]
+	path = numpy
+	url = https://github.com/angelikab028/numpy.git
