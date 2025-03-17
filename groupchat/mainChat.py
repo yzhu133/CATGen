@@ -1,10 +1,11 @@
 from autogen import AssistantAgent, UserProxyAgent, GroupChat, GroupChatManager
-from agents import test, user, testEngineer, tools
 from agents import configs
+from agents import user, testEngineer, tools, codeExecutor, requirements
+
 
 # Create a UserProxyAgent that can execute code
 
-agents = [user.user_proxy, testEngineer.test_engineer]
+agents = [user.user_proxy, tools.tools_agent, testEngineer.test_engineer, codeExecutor.code_executor_agent, requirements.requirement_writer]
 
 
 group_chat = GroupChat(
@@ -24,8 +25,8 @@ manager = GroupChatManager(
 )
 
 # Start a conversation where the assistant writes and executes a Python script
-manager.initiate_chat(
+user.user_proxy.initiate_chat(
     manager,
-    message="",
+    message="Show me the contents of the file located in testigns/mainTest.py",
     clear_history=True
 )

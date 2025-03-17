@@ -7,11 +7,11 @@ else:
     from .user import user_proxy
     from .configs import llama_3_1_config
 
-critic = autogen.AssistantAgent(
-    name = "critic",
+code_reviewer = autogen.AssistantAgent(
+    name = "code_reviewer",
     system_message = """
-    You are a unit test critic. Your job is to review the newly generated unit tests and give suggestions on how to improve them. 
-    Reply with only the suggestions.
+    You are a quality assureance engineer. Your job is to look at the results of the executed unit test suite and if the results show execution failed, give sugestions on how to fix it. 
+    Reply with only the suggestions and limited code snipbits.
     """,
     llm_config = llama_3_1_config,
     #description=""
@@ -20,4 +20,4 @@ critic = autogen.AssistantAgent(
 if __name__ == "__main__":
     user_proxy = UserProxyAgent("user", code_execution_config=False)
 
-    critic.initiate_chat(user_proxy, message="How can I help you today?")
+    code_reviewer.initiate_chat(user_proxy, message="How can I help you today?")

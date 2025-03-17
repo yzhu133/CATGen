@@ -1,6 +1,11 @@
 import autogen
 from autogen import UserProxyAgent, ConversableAgent
-import configs
+if __name__ == "__main__":
+    from user import user_proxy
+    from configs import llama_3_1_config
+else:
+    from .user import user_proxy
+    from .configs import llama_3_1_config
 
 requirement_writer = autogen.AssistantAgent(
     name = "requirements_agent",
@@ -10,7 +15,7 @@ requirement_writer = autogen.AssistantAgent(
     You will list out these requirements in a numbered list.
     You will not write the code, you will only write the requirements.
     """,
-    llm_config = configs.gemma3_config,
+    llm_config = llama_3_1_config,
     #description="I am responsible for writing the requirements"
 )
 
