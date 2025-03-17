@@ -87,6 +87,8 @@ multi-agent approach but requires further work.
 For future implementations, we would like to evaluate on comparison with NumPy's unit test library. For now, we do have a comprehensive list of NumPy's code coverage in [our repo](https://github.com/yzhu133/CATGen/blob/main/coverage_report.txt).
 ## Example Execution
 Below are screenshots and exact inputs of an example execution of "CATGen/groupchat/mainChat.py". Please note that results will vary from system to system due to the nature of these LLMs.
+![catgen](https://github.com/user-attachments/assets/d5eef11e-35fe-40cb-8199-74a3293b88c7)
+![catgenn](https://github.com/user-attachments/assets/17f602a4-771e-4ba8-b8ec-b5ca8e34dfa0)
 
 When you first run "mainChat.py" you will see you (User) have sent a default message to begin the workflow and will be prompted to select the next speaker from a list. Type "2" and click enter.
 ![catgen2](https://github.com/user-attachments/assets/00772653-71ee-4e50-9994-47ac117e9cc9)
