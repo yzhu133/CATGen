@@ -27,7 +27,10 @@ To run this project these are necessary dependencies we will install:
 * Python (>= 3.8 perferably)
 
 ## Evaluation and Results
-
+[results here]
+\
+\
+For future implementations, we would like to evaluate on comparison with NumPy's unit test library. For now, we do have a comprehensive list of NumPy's code coverage in [our repo](https://github.com/yzhu133/CATGen/blob/main/coverage_report.txt).
 
 ## Resources
 * [NumPy submodule](https://numpy.org/doc/2.2/dev/index.html)
