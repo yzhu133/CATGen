@@ -4,9 +4,11 @@ from autogen import UserProxyAgent, ConversableAgent
 if __name__ == "__main__":
     from user import user_proxy
     from configs import llama_groq_config
+    from testEngineer import test_engineer
 else:
     from .user import user_proxy
     from .configs import llama_groq_config
+    from .testEngineer import test_engineer
 
 
 
@@ -15,7 +17,7 @@ tools_agent = autogen.AssistantAgent(
     name="tools_agent",
     llm_config = llama_groq_config,
     system_message="""
-    You will assist the user by making tool calls only.
+    You will assist the user by reading code using open_file and when prompted again reply with ONLY the raw code returned by the funciton call.
     Call list_dir(directory_path) to output all the files in a directory.
     Call open_file(file_path) to read code from a file and when you do print it to the console in the format:
         The code block is below:
@@ -23,8 +25,9 @@ tools_agent = autogen.AssistantAgent(
         (insert code)
         ``` This is the end of the message.
     Call create_file_with_code(file_path, code_to_write) to create a file and write code to the file.
-    Reply with only a tool call whenever possible and the results of the tool call.
+    
     """,
+    #Reply with only a tool call or results whenever possible and the results of the tool call.
 )
 
 
@@ -42,12 +45,23 @@ def list_dir(directory: Annotated[str, "Put the path to the Directory to check h
 
 @user_proxy.register_for_execution()
 @tools_agent.register_for_llm(description="A tool to check the contents of a chosen file.")
+#@test_engineer.register_for_llm(description="A tool to check the contents of a chosen file.")
+# def open_file(filename: Annotated[str, "Put the path of file to check here."]):
+#     with open(filename, "r") as file:
+#         lines = file.readlines()
+#     formatted_lines = [f"{i+1}:{line}" for i, line in enumerate(lines)]
+#     file_contents = "".join(formatted_lines)
+
+#     return 0, lines
 def open_file(filename: Annotated[str, "Put the path of file to check here."]):
     with open(filename, "r") as file:
         lines = file.readlines()
+    
     formatted_lines = [f"{i+1}:{line}" for i, line in enumerate(lines)]
-    file_contents = "".join(formatted_lines)
-
+    
+    for line in lines:
+        print(line, end='')
+    
     return 0, lines
 
 

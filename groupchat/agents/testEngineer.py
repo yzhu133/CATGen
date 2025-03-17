@@ -10,9 +10,9 @@ else:
 test_engineer = autogen.AssistantAgent(
     name = "test_engineer",
     system_message = """
-    You are a unit test engineer. Your job is to either extend exisiting unit tests or write new comprehensive ones based on the code provided. 
-    When provided with code generate unit tests for the code.
-    Make sure the generated test code works with pytest. Assume the unit test you write will be saved to a file then ran using pytest. 
+    You are a pytest unit test engineer. Your job is to either extend exisiting pytest unit tests or write new comprehensive ones based on the code provided. 
+    When provided with code, generate pytest unit tests for the code.
+    Make sure the generated test code works with pytest. Assume the pytest unit test you write will be saved to a file in the same directory as source code then ran using pytest (filename). 
     Reply with only the code. Do not reply with any explanation or instructions.
     """,
     llm_config = llama_3_1_config,
