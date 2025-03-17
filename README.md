@@ -5,7 +5,7 @@ Unit test generation using large language models (LLMs) have shown promising res
 
 ## Documentation
 Below are the steps on how to deploy CATGen on a local machine. (Note that this project was built in Windows and some commands will differ for Linux or Mac).
-### Setting up Enviornment (optional):
+### Setting up Environment (optional):
 Create a clean virtual enviornment (Mac and Windows):
 ```
 python -m venv catgen-env
