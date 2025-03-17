@@ -27,7 +27,23 @@ To run this project these are necessary dependencies we will install:
 * Python (>= 3.8 perferably)
 
 ## Evaluation and Results
-[results here]
+To test and evaluate the generated unit tests, we passed in a [simple
+calculator python file](https://github.com/yzhu133/CATGen/blob/main/groupchat/testings/mainTest.py) that had basic functions such as add, subtract,
+multiple, and divide. Then as the User we manually selected the
+speakers in their intended order to generate a full PyTest unit test
+suite. We then empirically evaluated the generated unit test verifying if it did indeed generate unit tests for all existing functions
+within the source code. We then ran the code using PyTest and observed that the generate code executed without fail although it had
+some tests that did not pass. We attempted to feed the failing test
+cases back into the GroupChat to fix them. The results of this varied
+depending from iteration to iteration but in at least one iteration
+the agents fixed the code and generated a PyTest unit test suite that
+passed all the tests and tested all the functions. Ultimately however,
+the results of our experiement and testing demonstrated that our
+current prototype was unable to process and generate unit tests
+for large complex code bases. However, for smaller code bases it
+was able to successfully generate unit tests given enough attempts
+and prompting. This prototype serves as a proof of concept to a
+multi-agent approach but requires further work.
 \
 \
 For future implementations, we would like to evaluate on comparison with NumPy's unit test library. For now, we do have a comprehensive list of NumPy's code coverage in [our repo](https://github.com/yzhu133/CATGen/blob/main/coverage_report.txt).
