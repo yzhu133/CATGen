@@ -119,6 +119,7 @@ pytest test_mainTest.py
 * [PyTest API Reference](https://docs.pytest.org/en/7.1.x/reference/reference.html)
 * [Coverage.py API Reference](https://coverage.readthedocs.io/en/latest/api.html)
 * [Tool Useage "CATGen/groupchat/agents/tools.py"](https://github.com/microsoft/autogen/blob/9bc013b82d9379924369d802108eb859605a4e3f/notebook/agentchat_function_call_code_writing.ipynb)
+* [Code Executor](https://microsoft.github.io/autogen/0.2/docs/tutorial/code-executors/)
 * [Autogen Documentation](https://microsoft.github.io/autogen/0.2/docs/Getting-Started/)
 * [Pytest Documentation](https://docs.pytest.org/en/stable/)
 * [Ollama](https://ollama.com/)
