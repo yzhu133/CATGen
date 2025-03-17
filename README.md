@@ -47,6 +47,18 @@ multi-agent approach but requires further work.
 \
 \
 For future implementations, we would like to evaluate on comparison with NumPy's unit test library. For now, we do have a comprehensive list of NumPy's code coverage in [our repo](https://github.com/yzhu133/CATGen/blob/main/coverage_report.txt).
+![catgen1](https://github.com/user-attachments/assets/344b9fae-7aff-4f1c-9302-deb4de0f683b)
+![catgen2](https://github.com/user-attachments/assets/00772653-71ee-4e50-9994-47ac117e9cc9)
+![catgen3](https://github.com/user-attachments/assets/569223ba-3089-4bb4-8804-704f25231957)
+![catgen4](https://github.com/user-attachments/assets/8b1714c5-f935-4207-afc8-0342e8cc5f93)
+![catgen5](https://github.com/user-attachments/assets/d320aada-76b5-41c9-a010-600eeb1102ca)
+![catgen6](https://github.com/user-attachments/assets/079a51b4-9a10-485e-acdb-137dd930e19c)
+![catgen7](https://github.com/user-attachments/assets/717726cd-05cd-42a3-8a12-8eb9ae58803d)
+![catgen8](https://github.com/user-attachments/assets/61d7c8a2-314a-4fb0-9072-9eba04888b08)
+![catgen9](https://github.com/user-attachments/assets/e29d534f-781b-42ef-bc2a-933ede75acfe)
+![catgen10](https://github.com/user-attachments/assets/883b4615-447e-4bb3-bb82-d8244a7f1a8b)
+![catgen11](https://github.com/user-attachments/assets/f54b9d0e-9096-41fc-a607-d1493d1bb608)
+![catgen12](https://github.com/user-attachments/assets/fba605de-309c-4b56-a425-4ced58e2c173)
 
 ## Resources
 * [NumPy submodule](https://numpy.org/doc/2.2/dev/index.html)
