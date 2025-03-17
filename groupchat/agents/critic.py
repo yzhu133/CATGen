@@ -11,7 +11,7 @@ critic = autogen.AssistantAgent(
     name = "critic",
     system_message = """
     You are a unit test critic. Your job is to review the newly generated unit tests and give suggestions on how to improve them. 
-    Reply with only the suggestions.1
+    Reply with only the suggestions.
     """,
     llm_config = llama_3_1_config,
     #description=""
