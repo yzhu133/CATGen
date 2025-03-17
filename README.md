@@ -47,7 +47,7 @@ pip install openai
 pip install ollama
 pip install pytest
 ```
-Now the enviornment should be set up.
+Now the environnment should be set up.
 ### Running CATGen:
 In this current submission, the source code that we will generate unit test code for is located in the directory "CATgen/testings/mainTest.py".
 
